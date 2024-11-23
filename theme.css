@@ -4,6 +4,158 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+/* Keyframes Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Hover and Transition Effects */
+a {
+  color: #004d00; /* Dark green */
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.2s ease;
+}
+
+a:hover, a:focus {
+  text-decoration: underline;
+  color: #003b00; /* Slightly darker green */
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+}
+
+.navbar {
+  background-image: linear-gradient(to bottom, rgba(0, 77, 0, 0.8), rgba(0, 59, 0, 0.8)); /* Dark green gradient */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  animation: slideInDown 0.8s ease-out;
+}
+
+.navbar:hover {
+  background-color: rgba(0, 38, 0, 0.9); /* Very dark green */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-nav .nav-link {
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #004d00; /* Dark green */
+  transform: translateY(-2px);
+}
+
+.py-5 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: fadeIn 1s ease-out;
+}
+
+.bg-white {
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  animation: fadeIn 1s ease-out;
+}
+
+.bg-white:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.bg-white h1, .bg-white p {
+  transition: color 0.3s ease;
+}
+
+.bg-white h1:hover, .bg-white p:hover {
+  color: #004d00; /* Dark green */
+}
+
+.img-fluid {
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-fluid:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+i.fa-info {
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+i.fa-info:hover {
+  color: #004d00; /* Dark green */
+  transform: scale(1.1);
+}
+
+.form-control {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.form-control:focus {
+  border-color: #004d00; /* Dark green */
+  box-shadow: 0 0 0 0.2rem rgba(0, 77, 0, 0.25);
+  transform: scale(1.02);
+}
+
+.btn-secondary {
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #003b00; /* Very dark green */
+  border-color: #003b00; /* Very dark green */
+  transform: scale(1.05);
+}
+
+footer {
+  background-color: #002b00; /* Very dark green */
+  color: #fff;
+  padding: 2rem 0;
+}
+
+footer a {
+  color: #004d00; /* Dark green */
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+footer a:hover {
+  color: #003b00; /* Slightly darker green */
+  transform: translateY(-2px);
+}
+
+footer i {
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+footer i:hover {
+  color: #003b00; /* Slightly darker green */
+  transform: scale(1.1);
+}
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
